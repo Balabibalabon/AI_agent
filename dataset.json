@@ -1,0 +1,17 @@
+[
+  {
+    "task": "Parse an AWS S3 bucket name from a full S3 URI (e.g., 's3://my-bucket-name/path/to/file.txt') and extract just the bucket name",
+    "format": "regex",
+    "solution_criteria": "Should correctly extract bucket names following AWS naming conventions (lowercase, hyphens, numbers). Must handle URIs with and without trailing paths."
+  },
+  {
+    "task": "Create a Python function that takes an AWS region code (e.g., 'us-east-1') and returns a dictionary with the region code as key and a human-readable region name as value",
+    "format": "python",
+    "solution_criteria": "Function should map at least 5 common AWS regions to their names. Should handle invalid region codes gracefully with a default return value."
+  },
+  {
+    "task": "Generate a JSON IAM policy document that allows read-only access to a specific S3 bucket named 'company-data' and all its objects",
+    "format": "json",
+    "solution_criteria": "Policy should follow AWS IAM policy structure with proper Version, Statement, Effect, Action, and Resource fields. Should grant GetObject and ListBucket permissions only."
+  }
+]
