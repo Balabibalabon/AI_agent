@@ -1,17 +1,18 @@
 [
   {
     "prompt_inputs": {
-      "height": "178 cm",
+      "height": "180 cm",
       "weight": "72 kg",
-      "goal": "Marathon training - high-endurance athlete requiring 3000+ calories with carbohydrate loading and hydration strategy",
-      "restrictions": "None"
+      "goal": "Marathon training with high-carbohydrate fueling strategy for endurance performance",
+      "restrictions": "Gluten intolerance, dairy allergy, minimum 3500 calories, high carbohydrates (55-60% of calories), moderate protein (1.6g per kg body weight)"
     },
     "solution_criteria": [
-      "Meal plan totals 3000+ calories with carbohydrates comprising 55-65% of total calories",
-      "Includes specific hydration strategy with fluid intake recommendations throughout the day",
-      "Provides 4-5 meals/snacks distributed across the day suitable for marathon training"
+      "Meal plan meets or exceeds 3500 calorie target",
+      "All meals are gluten-free and dairy-free with no prohibited ingredients",
+      "Macronutrient distribution aligns with specified ratios (55-60% carbs, protein \u2265115g)",
+      "Includes practical, realistic meals suitable for an endurance athlete"
     ],
-    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
-    "scenario": "Testing with a high-endurance athlete (marathon runner) requiring 3000+ calories with emphasis on carbohydrate loading and hydration strategy"
+    "task_description": "Generate a one-day meal plan for an athlete that meets their dietary restrictions",
+    "scenario": "Testing with a professional endurance athlete (marathon runner) who has multiple dietary restrictions including gluten intolerance, dairy allergy, and a requirement for high-carbohydrate, moderate-protein intake with specific caloric targets (3500+ calories)"
   }
 ]

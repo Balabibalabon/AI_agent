@@ -113,7 +113,7 @@
             <div class="summary-stats">
                 <div class="stat-box">
                     <div>Total Test Cases</div>
-                    <div class="stat-value">1</div>
+                    <div class="stat-value">4</div>
                 </div>
                 <div class="stat-box">
                     <div>Average Score</div>
@@ -140,41 +140,126 @@
             <tbody>
     
             <tr>
-                <td>Testing with a high-endurance athlete (marathon runner) requiring 3000+ calories with emphasis on carbohydrate loading and hydration strategy</td>
-                <td class="prompt-inputs"><strong>height:</strong> 178 cm<br><strong>weight:</strong> 72 kg<br><strong>goal:</strong> Marathon training - high-endurance athlete requiring 3000+ calories with carbohydrate loading and hydration strategy<br><strong>restrictions:</strong> None</td>
-                <td class="criteria">• Meal plan totals 3000+ calories with carbohydrates comprising 55-65% of total calories<br>• Includes specific hydration strategy with fluid intake recommendations throughout the day<br>• Provides 4-5 meals/snacks distributed across the day suitable for marathon training</td>
-                <td class="output"><pre># One-Day Meal Plan for Marathon Training Athlete
-
-Here is a one-day meal plan for a high-endurance athlete in marathon training:
-
-* **Calorie Target:** Approximately 3200 calories
-* **Macronutrient Breakdown:** Protein (120g), Fat (85g), Carbs (450g)
-
-**Meal Plan:**
-
-* **Breakfast (7:00 AM):** Oatmeal (100g dry weight) with banana (150g), honey (30g), and whole milk (240g). Side of whole wheat toast (60g) with almond butter (20g).
-    * Protein: 18g, Fat: 12g, Carbs: 95g
-
-* **Mid-Morning Snack (10:00 AM):** Sports drink (500ml) with electrolytes and granola bar (50g).
-    * Protein: 6g, Fat: 8g, Carbs: 65g
-
-* **Lunch (1:00 PM):** Grilled chicken breast (150g) with brown rice (150g cooked), steamed sweet potato (200g), and mixed vegetables (100g) drizzled with olive oil (15ml).
-    * Protein: 40g, Fat: 12g, Carbs: 85g
-
-* **Pre-Training Snack (4:00 PM):** Energy bar (60g) and apple (180g) with peanut butter (25g).
-    * Protein: 10g, Fat: 12g, Carbs: 70g
-
-* **Dinner (7:30 PM):** Baked salmon (160g) with pasta (120g dry weight), marinara sauce (150g), and steamed broccoli (150g). Olive oil drizzle (10ml).
-    * Protein: 35g, Fat: 18g, Carbs: 95g
-
-* **Evening Recovery Snack (9:30 PM):** Greek yogurt (200g) with berries (120g) and granola (40g).
-    * Protein: 15g, Fat: 8g, Carbs: 50g
-
-**Hydration Strategy:** Consume 2.5-3 liters of water throughout the day, plus electrolyte drinks during/around training sessions.
-
-This meal plan emphasizes complex carbohydrates for sustained energy, adequate protein for muscle recovery, and strategic timing around training to maximize endurance performance.</pre></td>
+                <td>Testing with a humanities passage containing multiple interconnected philosophical concepts and historical references to verify accurate topic extraction from abstract, non-technical content</td>
+                <td class="prompt-inputs"><strong>content:</strong> The Enlightenment's epistemological revolution fundamentally challenged medieval scholasticism through the valorization of empirical observation and rational inquiry, a shift exemplified in Descartes' methodological skepticism and Locke's sensationalism. Yet this intellectual transformation remained deeply entangled with theological concerns, as natural philosophers sought to reconcile mechanical philosophy with divine providence. The tension between determinism and human agency, inherited from Calvinist predestination debates, persisted throughout the period, manifesting in Hume's critique of causality and Kant's synthetic a priori knowledge. Furthermore, the rise of scientific societies and the professionalization of natural philosophy reflected broader social anxieties about expertise, authority, and the democratization of knowledge during an era of political upheaval and colonial expansion.</td>
+                <td class="criteria">• Extracts all major philosophical and historical concepts (e.g., Enlightenment, empiricism, scholasticism, determinism, scientific authority)<br>• Captures interconnected themes and movements mentioned (e.g., natural philosophy, mechanical philosophy, Calvinist debates)<br>• Returns output as a valid JSON array of strings<br>• Avoids including minor descriptors while preserving substantive topics</td>
+                <td class="output"><pre>```json
+[
+  "Enlightenment epistemology",
+  "Medieval scholasticism",
+  "Empirical observation",
+  "Rational inquiry",
+  "Descartes' methodological skepticism",
+  "Locke's sensationalism",
+  "Mechanical philosophy",
+  "Divine providence",
+  "Determinism",
+  "Human agency",
+  "Calvinist predestination",
+  "Hume's critique of causality",
+  "Kant's synthetic a priori knowledge",
+  "Scientific societies",
+  "Natural philosophy",
+  "Professionalization of science",
+  "Expertise and authority",
+  "Democratization of knowledge",
+  "Political upheaval",
+  "Colonial expansion"
+]
+```</pre></td>
                 <td class="score-col"><span class="score score-high">9</span></td>
-                <td class="reasoning">The solution fully satisfies all three mandatory requirements: it provides a daily caloric total of 3200 calories, includes a complete macronutrient breakdown (120g protein, 85g fat, 450g carbs), and presents 6 meals/snacks with exact foods, portions, and specific timing throughout the day. The carbohydrate percentage (56.25%) falls squarely within the required 55-65% range. The hydration strategy is included with concrete recommendations (2.5-3L water plus electrolytes). All secondary criteria are met. Minor weaknesses exist in calculation precision and granularity of hydration timing, but these do not constitute violations of stated requirements. The meal plan is compact, concise, and appropriately tailored for marathon training.</td>
+                <td class="reasoning">The solution fully satisfies all mandatory requirements: it is a valid JSON array of strings containing topics from the passage with no extra commentary. Regarding secondary criteria, it successfully extracts all major philosophical and historical concepts and captures interconnected themes. The extraction is substantive and avoids minor descriptors. The only minor issue is slight inconsistency in how specific versus general topics are presented (some entries combine philosopher names with doctrines while others stand alone), but this is a minor stylistic concern that doesn't significantly impact the quality of the topic extraction. The solution demonstrates strong understanding of the passage's content.</td>
+            </tr>
+        
+            <tr>
+                <td>Testing with a dense scientific abstract containing specialized terminology, chemical compounds, and methodology details to ensure domain-specific topics are properly identified and isolated</td>
+                <td class="prompt-inputs"><strong>content:</strong> This study investigates the photocatalytic degradation of persistent organic pollutants using graphene oxide-titanium dioxide nanocomposites under visible light irradiation. We synthesized GO-TiO2 hybrids via a hydrothermal method and characterized them using X-ray diffraction, scanning electron microscopy, and Brunauer-Emmett-Teller surface area analysis. The nanocomposites demonstrated enhanced photocatalytic activity toward methylene blue and tetracycline degradation, achieving 94% removal efficiency within 120 minutes compared to 67% for pristine TiO2. Mechanistic studies using electron paramagnetic resonance spectroscopy revealed that the enhanced performance resulted from improved charge carrier separation and increased hydroxyl radical generation at the GO-TiO2 interface. Kinetic analysis showed pseudo-first-order reaction kinetics with apparent rate constants of 0.0287 min⁻¹ for the nanocomposite versus 0.0156 min⁻¹ for pure TiO2. These findings suggest that graphene oxide integration provides a promising strategy for developing efficient photocatalysts for environmental remediation applications.</td>
+                <td class="criteria">• Extracts all major scientific topics including materials, methods, and compounds mentioned<br>• Isolates domain-specific terminology and specialized concepts as distinct topics<br>• Returns results as a valid JSON array of strings<br>• Does not include generic words or filler terms unrelated to the scientific content</td>
+                <td class="output"><pre>```json
+[
+  "Photocatalytic degradation",
+  "Persistent organic pollutants",
+  "Graphene oxide",
+  "Titanium dioxide nanocomposites",
+  "Visible light irradiation",
+  "GO-TiO2 hybrids",
+  "Hydrothermal synthesis",
+  "X-ray diffraction",
+  "Scanning electron microscopy",
+  "Brunauer-Emmett-Teller surface area analysis",
+  "Methylene blue degradation",
+  "Tetracycline degradation",
+  "Photocatalytic activity",
+  "Charge carrier separation",
+  "Hydroxyl radical generation",
+  "Electron paramagnetic resonance spectroscopy",
+  "Pseudo-first-order reaction kinetics",
+  "Environmental remediation",
+  "Photocatalysts"
+]
+```</pre></td>
+                <td class="score-col"><span class="score score-high">9</span></td>
+                <td class="reasoning">The solution fully satisfies all mandatory requirements: it is a valid JSON array of strings containing topics from the article, with no extra commentary, and returns only the JSON array. Regarding secondary criteria, it successfully extracts all major scientific topics across materials, methods, and compounds while avoiding generic filler terms. The domain-specific terminology is well-isolated (e.g., 'Pseudo-first-order reaction kinetics', 'Charge carrier separation', 'Hydroxyl radical generation'). The only minor deficiency is slight redundancy between 'Photocatalytic degradation' and 'Photocatalytic activity', though both represent distinct concepts in the context. Overall, the solution demonstrates strong comprehension of the scholarly content and appropriate topic extraction.</td>
+            </tr>
+        
+            <tr>
+                <td>Testing with a passage containing overlapping or nested topics where one concept encompasses another, to verify the prompt can distinguish between broad themes and specific subtopics</td>
+                <td class="prompt-inputs"><strong>content:</strong> Machine learning applications in healthcare have revolutionized diagnostic imaging through deep learning architectures. Convolutional neural networks, a specific subset of deep learning, have achieved 94% accuracy in detecting breast cancer from mammograms, while recurrent neural networks excel at analyzing temporal patient data sequences for predicting disease progression. These neural network approaches, though distinct in their mechanisms, both fall under the broader category of artificial intelligence and depend on fundamental statistical learning theory. Additionally, the implementation of these AI systems in clinical settings raises important considerations about data privacy, algorithmic bias, and regulatory compliance within healthcare governance frameworks.</td>
+                <td class="criteria">• Distinguishes between broad categories (machine learning, deep learning, artificial intelligence) and specific subtopics (convolutional neural networks, recurrent neural networks, diagnostic imaging)<br>• Avoids excessive duplication when concepts are nested or overlapping<br>• Captures domain-specific topics (healthcare, clinical settings, disease progression) alongside methodological topics (neural networks, statistical learning theory)<br>• Returns output as a valid JSON array of strings</td>
+                <td class="output"><pre>```json
+[
+  "Machine learning in healthcare",
+  "Diagnostic imaging",
+  "Deep learning architectures",
+  "Convolutional neural networks",
+  "Breast cancer detection",
+  "Mammograms",
+  "Recurrent neural networks",
+  "Temporal patient data analysis",
+  "Disease progression prediction",
+  "Artificial intelligence",
+  "Statistical learning theory",
+  "AI in clinical settings",
+  "Data privacy",
+  "Algorithmic bias",
+  "Regulatory compliance",
+  "Healthcare governance"
+]
+```</pre></td>
+                <td class="score-col"><span class="score score-high">9</span></td>
+                <td class="reasoning">The solution fully satisfies all mandatory requirements: it is a valid JSON array of strings containing topics from the passage with no extra commentary. Regarding secondary criteria, it effectively distinguishes between broad and specific categories, avoids excessive duplication (only minor overlap in 2-3 items), and captures both methodological and domain-specific topics comprehensively. The extraction is thorough and well-organized, with only minor opportunities for refinement in topic granularity.</td>
+            </tr>
+        
+            <tr>
+                <td>Testing with a mixed-discipline passage that combines quantitative data, qualitative analysis, and policy implications to ensure topics from different knowledge domains are extracted separately and accurately</td>
+                <td class="prompt-inputs"><strong>content:</strong> This study examines the intersection of climate policy, agricultural productivity, and economic resilience in sub-Saharan Africa. Our quantitative analysis of 47 countries over 15 years reveals a 3.2% annual decline in crop yields correlated with temperature increases of 0.8°C, with significant regional variation (r² = 0.68, p < 0.001). Qualitatively, farmer interviews across Kenya, Ghana, and Zambia identified three adaptive strategies: crop diversification, water harvesting infrastructure, and seasonal forecasting adoption. Policy implications suggest that carbon pricing mechanisms could incentivize investment in climate-resilient agriculture, though implementation faces barriers including limited access to credit, inadequate extension services, and competing land-use pressures from urbanization. Our findings indicate that integrated approaches combining technological innovation, institutional reform, and targeted financial support are essential for sustainable agricultural development under climate change.</td>
+                <td class="criteria">• Extracts topics spanning quantitative analysis (statistical findings, yield decline, temperature correlation), qualitative research (farmer strategies, regional case studies), and policy domains (carbon pricing, institutional barriers, financial mechanisms)<br>• Separates distinct topics rather than grouping them into overly broad categories<br>• Returns results as a JSON array of strings with no additional fields or metadata</td>
+                <td class="output"><pre>```json
+[
+  "Climate policy",
+  "Agricultural productivity",
+  "Economic resilience",
+  "Sub-Saharan Africa",
+  "Crop yields",
+  "Temperature increase",
+  "Regional variation",
+  "Crop diversification",
+  "Water harvesting infrastructure",
+  "Seasonal forecasting",
+  "Carbon pricing mechanisms",
+  "Climate-resilient agriculture",
+  "Access to credit",
+  "Extension services",
+  "Land-use pressure",
+  "Urbanization",
+  "Technological innovation",
+  "Institutional reform",
+  "Financial support",
+  "Sustainable agricultural development"
+]
+```</pre></td>
+                <td class="score-col"><span class="score score-high">9</span></td>
+                <td class="reasoning">The solution fully satisfies all mandatory requirements: it is a JSON array of strings containing topics from the article, with clean topic names and no extraneous commentary. It meets the secondary criteria by spanning quantitative analysis, qualitative research, and policy domains while maintaining appropriate topic separation. The extraction is thorough and well-balanced across the passage's main themes. Minor omissions of some implicit topics and slight inconsistency in granularity prevent a perfect score, but these are minor issues that do not undermine the overall quality of the response.</td>
             </tr>
         
             </tbody>

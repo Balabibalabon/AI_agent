@@ -1,0 +1,53 @@
+[
+  {
+    "prompt_inputs": {
+      "content": "The Enlightenment's epistemological revolution fundamentally challenged medieval scholasticism through the valorization of empirical observation and rational inquiry, a shift exemplified in Descartes' methodological skepticism and Locke's sensationalism. Yet this intellectual transformation remained deeply entangled with theological concerns, as natural philosophers sought to reconcile mechanical philosophy with divine providence. The tension between determinism and human agency, inherited from Calvinist predestination debates, persisted throughout the period, manifesting in Hume's critique of causality and Kant's synthetic a priori knowledge. Furthermore, the rise of scientific societies and the professionalization of natural philosophy reflected broader social anxieties about expertise, authority, and the democratization of knowledge during an era of political upheaval and colonial expansion."
+    },
+    "solution_criteria": [
+      "Extracts all major philosophical and historical concepts (e.g., Enlightenment, empiricism, scholasticism, determinism, scientific authority)",
+      "Captures interconnected themes and movements mentioned (e.g., natural philosophy, mechanical philosophy, Calvinist debates)",
+      "Returns output as a valid JSON array of strings",
+      "Avoids including minor descriptors while preserving substantive topics"
+    ],
+    "task_description": "\n        Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+    "scenario": "Testing with a humanities passage containing multiple interconnected philosophical concepts and historical references to verify accurate topic extraction from abstract, non-technical content"
+  },
+  {
+    "prompt_inputs": {
+      "content": "This study investigates the photocatalytic degradation of persistent organic pollutants using graphene oxide-titanium dioxide nanocomposites under visible light irradiation. We synthesized GO-TiO2 hybrids via a hydrothermal method and characterized them using X-ray diffraction, scanning electron microscopy, and Brunauer-Emmett-Teller surface area analysis. The nanocomposites demonstrated enhanced photocatalytic activity toward methylene blue and tetracycline degradation, achieving 94% removal efficiency within 120 minutes compared to 67% for pristine TiO2. Mechanistic studies using electron paramagnetic resonance spectroscopy revealed that the enhanced performance resulted from improved charge carrier separation and increased hydroxyl radical generation at the GO-TiO2 interface. Kinetic analysis showed pseudo-first-order reaction kinetics with apparent rate constants of 0.0287 min\u207b\u00b9 for the nanocomposite versus 0.0156 min\u207b\u00b9 for pure TiO2. These findings suggest that graphene oxide integration provides a promising strategy for developing efficient photocatalysts for environmental remediation applications."
+    },
+    "solution_criteria": [
+      "Extracts all major scientific topics including materials, methods, and compounds mentioned",
+      "Isolates domain-specific terminology and specialized concepts as distinct topics",
+      "Returns results as a valid JSON array of strings",
+      "Does not include generic words or filler terms unrelated to the scientific content"
+    ],
+    "task_description": "\n        Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+    "scenario": "Testing with a dense scientific abstract containing specialized terminology, chemical compounds, and methodology details to ensure domain-specific topics are properly identified and isolated"
+  },
+  {
+    "prompt_inputs": {
+      "content": "Machine learning applications in healthcare have revolutionized diagnostic imaging through deep learning architectures. Convolutional neural networks, a specific subset of deep learning, have achieved 94% accuracy in detecting breast cancer from mammograms, while recurrent neural networks excel at analyzing temporal patient data sequences for predicting disease progression. These neural network approaches, though distinct in their mechanisms, both fall under the broader category of artificial intelligence and depend on fundamental statistical learning theory. Additionally, the implementation of these AI systems in clinical settings raises important considerations about data privacy, algorithmic bias, and regulatory compliance within healthcare governance frameworks."
+    },
+    "solution_criteria": [
+      "Distinguishes between broad categories (machine learning, deep learning, artificial intelligence) and specific subtopics (convolutional neural networks, recurrent neural networks, diagnostic imaging)",
+      "Avoids excessive duplication when concepts are nested or overlapping",
+      "Captures domain-specific topics (healthcare, clinical settings, disease progression) alongside methodological topics (neural networks, statistical learning theory)",
+      "Returns output as a valid JSON array of strings"
+    ],
+    "task_description": "\n        Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+    "scenario": "Testing with a passage containing overlapping or nested topics where one concept encompasses another, to verify the prompt can distinguish between broad themes and specific subtopics"
+  },
+  {
+    "prompt_inputs": {
+      "content": "This study examines the intersection of climate policy, agricultural productivity, and economic resilience in sub-Saharan Africa. Our quantitative analysis of 47 countries over 15 years reveals a 3.2% annual decline in crop yields correlated with temperature increases of 0.8\u00b0C, with significant regional variation (r\u00b2 = 0.68, p < 0.001). Qualitatively, farmer interviews across Kenya, Ghana, and Zambia identified three adaptive strategies: crop diversification, water harvesting infrastructure, and seasonal forecasting adoption. Policy implications suggest that carbon pricing mechanisms could incentivize investment in climate-resilient agriculture, though implementation faces barriers including limited access to credit, inadequate extension services, and competing land-use pressures from urbanization. Our findings indicate that integrated approaches combining technological innovation, institutional reform, and targeted financial support are essential for sustainable agricultural development under climate change."
+    },
+    "solution_criteria": [
+      "Extracts topics spanning quantitative analysis (statistical findings, yield decline, temperature correlation), qualitative research (farmer strategies, regional case studies), and policy domains (carbon pricing, institutional barriers, financial mechanisms)",
+      "Separates distinct topics rather than grouping them into overly broad categories",
+      "Returns results as a JSON array of strings with no additional fields or metadata"
+    ],
+    "task_description": "\n        Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+    "scenario": "Testing with a mixed-discipline passage that combines quantitative data, qualitative analysis, and policy implications to ensure topics from different knowledge domains are extracted separately and accurately"
+  }
+]
