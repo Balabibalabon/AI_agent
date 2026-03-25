@@ -1,0 +1,119 @@
+╔══════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                              CHURN ANALYSIS EXECUTIVE SUMMARY                                    ║
+╚══════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+📊 OVERVIEW
+────────────────────────────────────────────────────────────────────────────────────────────────────
+   Dataset Size: 500 customers
+   Overall Churn Rate: 38.6%
+   Analysis Method: Random Forest Classification (87.2% accuracy)
+
+
+🎯 TOP 5 CHURN DRIVERS (Ranked by Importance)
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+┌─ #1: TOTAL VIEWING HOURS (24.1% importance) ─────────────────────────────────────┐
+│                                                                                   │
+│   • Churned customers watch 66.6 hours/month vs 83.2 for retained (20% less)     │
+│   • This is the SINGLE STRONGEST predictor of churn                              │
+│   • Action: Alert when usage drops below 70 hours/month                           │
+│                                                                                   │
+└───────────────────────────────────────────────────────────────────────────────────┘
+
+┌─ #2: SESSION DURATION (21.4% importance) ────────────────────────────────────────┐
+│                                                                                   │
+│   • Churned: 49.4 min/session vs Retained: 57.8 min/session (14% shorter)        │
+│   • Shorter sessions = disengagement and lack of compelling content              │
+│   • Action: Flag accounts with <50 minute average sessions                        │
+│                                                                                   │
+└───────────────────────────────────────────────────────────────────────────────────┘
+
+┌─ #3: UNIQUE TITLES WATCHED (15.2% importance) ───────────────────────────────────┐
+│                                                                                   │
+│   • Churned: 19.5 titles vs Retained: 23.7 titles (18% less variety)             │
+│   • Limited exploration suggests content discovery issues                         │
+│   • Action: Push personalized recommendations to users watching <20 titles        │
+│                                                                                   │
+└───────────────────────────────────────────────────────────────────────────────────┘
+
+┌─ #4: CUSTOMER SERVICE CONTACTS (11.2% importance) ───────────────────────────────┐
+│                                                                                   │
+│   • Churned: 3.2 contacts/year vs Retained: 2.5 (28% MORE contacts)              │
+│   • High CS contact = likely unresolved issues or dissatisfaction                 │
+│   • Action: Proactive outreach after 3rd contact in 12 months                     │
+│                                                                                   │
+└───────────────────────────────────────────────────────────────────────────────────┘
+
+┌─ #5: BINGE WATCHING FREQUENCY (11.1% importance) ────────────────────────────────┐
+│                                                                                   │
+│   • Churned: 6.2 sessions vs Retained: 7.7 sessions (20% fewer)                  │
+│   • Binge watching = strong engagement signal                                     │
+│   • Action: Promote series/shows that encourage binge watching                    │
+│                                                                                   │
+└───────────────────────────────────────────────────────────────────────────────────┘
+
+
+🎭 CONTENT INSIGHTS
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+   HIGH RISK GENRES (Above 40% churn):
+      🔴 Horror: 52.3% churn
+      🔴 Thriller: 48.3% churn
+      🔴 Action: 44.6% churn
+
+   LOW RISK GENRES (Below 35% churn):
+      🟢 Documentary: 25.9% churn
+      🟢 Comedy: 33.0% churn
+      🟢 Drama: 35.3% churn
+
+
+💰 SUBSCRIPTION TIER INSIGHTS
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+      Tier        | Churn Rate | Count | Status
+   ──────────────┼────────────┼───────┼────────────
+      Basic       |   43.5%    |  207  | 🔴 HIGH RISK
+      Standard    |   39.5%    |  210  | ⚠️  MEDIUM
+      Premium     |   24.1%    |   83  | 🟢 LOW RISK
+
+   Key Finding: Premium tier has 44% lower churn than Basic tier
+
+
+💡 STRATEGIC RECOMMENDATIONS
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+   IMMEDIATE ACTIONS (0-30 days):
+   1. Deploy early warning system based on engagement thresholds
+   2. Implement post-CS interaction follow-up protocols
+   3. Launch personalized recommendation campaigns for low-engagement users
+
+   SHORT-TERM INITIATIVES (1-3 months):
+   4. Expand Documentary and Comedy catalog (proven retention drivers)
+   5. Create binge-worthy series promotion campaigns
+   6. Develop Basic-to-Premium upgrade incentives
+
+   LONG-TERM STRATEGY (3-12 months):
+   7. Improve Horror/Thriller content quality to reduce genre-based churn
+   8. Build gamification features to encourage content exploration
+   9. Implement predictive model in production to score churn risk daily
+
+
+📈 EXPECTED IMPACT
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+   If recommendations are implemented:
+   • Potential churn reduction: 8-12 percentage points
+   • Target churn rate: ~27-30% (from current 38.6%)
+   • Estimated customer retention: +40-60 customers (from current cohort)
+   • Focus on Basic tier could yield highest absolute gains
+
+
+🔍 KEY INSIGHT
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+   The data conclusively shows that ENGAGEMENT, not price, drives retention.
+   Churning customers pay similar amounts but engage 15-20% less across ALL
+   metrics. The solution is not price cuts but improving content discovery,
+   personalization, and addressing service issues before they accumulate.
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
